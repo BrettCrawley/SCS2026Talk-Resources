@@ -1,0 +1,199 @@
+{
+  "cell": "run2",
+  "pack_documents": 1,
+  "pack_findings_discussed": [
+    "T-01", "T-02", "T-03", "T-04", "T-06", "T-07", "T-08", "T-09",
+    "T-11", "T-13", "T-14", "T-15", "T-16", "T-18", "T-19", "T-20",
+    "T-21", "T-22", "T-23", "T-24", "G-1", "G-2", "Chain-B", "Chain-C"
+  ],
+  "pack_findings_not_reached": ["T-05", "T-10", "T-12", "T-17", "T-25", "G-3", "G-4", "G-5", "G-6", "G-7"],
+  "human_facts": [
+    {
+      "id": "H-01",
+      "outcome": "surfaced",
+      "owner": "Tom Egerton",
+      "evidence": "Pack has no reference to Slack Connect or external Slack participants anywhere; T-01 classifies Slack as 'authorable by any insider or wide contributor population'. Tom supplies three Connect channels shared with customers and two enterprise accounts using them, contradicting the pack's own categorisation and amending the section 2.3 boundary diagram."
+    },
+    {
+      "id": "H-02",
+      "outcome": "already_in_pack",
+      "owner": "Tom Egerton",
+      "evidence": "T-01 states \"Support's shared mailbox — customer-authored content, explicitly in scope for the Support pilot\"; section 2.2 assets row reads \"Mail content (incl. Support shared mailbox)\"; T-18 quotes the open question and confirms ws-support has read_mail: true. Tom confirms and adds product motive only."
+    },
+    {
+      "id": "H-03",
+      "outcome": "instance_only",
+      "owner": "Priya Raghunathan",
+      "evidence": "Pack holds the class in T-22 (community MCP server in-cluster, no dependency scanning) and even lists 'pin and review the community MCP server' as a mitigation; section 8 records the servers as out of repo and unassessed. Priya supplies the instance: all five connectors are pinned to latest, including the community web-search server."
+    },
+    {
+      "id": "H-04",
+      "outcome": "surfaced",
+      "owner": "Ines Ferreira",
+      "evidence": "Pack contains no reference to SOC 2, ISO 27001, NIS2 or certification scope; it reaches DPA/DPIA in T-14 and T-18 but nothing on which obligations the organisation carries. Prompted by T-14; Ines supplies SOC 2 Type II not ISO 27001, not a NIS2 entity, two customers are and the contracts carry the obligation."
+    },
+    {
+      "id": "H-05",
+      "outcome": "surfaced",
+      "owner": "Priya Raghunathan",
+      "evidence": "Pack discusses commit at length (T-21, T-03, recommendation 3) and never touches usage volume of any tool. Prompted by recommendation 3 ('make commit open a pull request'); Priya supplies eleven uses since July, nine of them her own testing. Changed Marcus's disposition on the direct-write path."
+    },
+    {
+      "id": "H-06",
+      "outcome": "already_in_pack",
+      "owner": "Ines Ferreira raises, Priya Raghunathan confirms",
+      "evidence": "T-18 first sentence: \"The dashboard aggregates to team, but the stored telemetry is per-request with a user dimension, retained 13 months in the warehouse.\" Room confirms; not written as a revelation."
+    },
+    {
+      "id": "H-07",
+      "outcome": "already_in_pack",
+      "owner": "Priya Raghunathan",
+      "evidence": "T-21 cites .github/branch-protection-exemptions.yml by path and quotes both entries; G-2 states the invisibility pattern outright — 'a reference page asserting estate-wide controls with per-team exceptions invisible from the citation'. Priya adds only that it is a config file in the org repo, a location detail."
+    }
+  ],
+  "beliefs_raised": [
+    {
+      "id": "B-01",
+      "held_by": ["Marcus Oyelaran", "Kwame Osei"],
+      "surfaced_at": "T-21",
+      "outcome": "pack correct, room corrected",
+      "detail": "T-21 quotes Marcus's own PLAT-2817-3 comment and the exemptions file. Both conceded within minutes; Marcus escalated it himself to the CI-template inheritance."
+    },
+    {
+      "id": "B-02",
+      "held_by": ["Kwame Osei", "Marcus Oyelaran"],
+      "surfaced_at": "T-16",
+      "outcome": "pack correct, room corrected",
+      "detail": "Set piece. Kwame opened by proposing T-16 be downgraded on the strength of the egress proxy; corrected by the pack's own sentence that the request originates from the user's endpoint, not a cluster workload, so the domain allowlist never sees it. Facilitator recorded aloud that the correction came from the document."
+    },
+    {
+      "id": "B-03",
+      "held_by": ["Marcus Oyelaran", "Kwame Osei", "Dana Whitfield"],
+      "surfaced_at": "drift table rows 1-3, T-03, G-1",
+      "outcome": "pack correct, room corrected",
+      "detail": "Conceded in under three minutes because the pack cites ADR-0002 verbatim and serviceIdentity.ts. Discomfort explicit and unprompted: the refuting ADR has been in their own repository since April with a section titled 'Not written back'. Kwame had not read it because the architecture page is the approved page."
+    }
+  ],
+  "drift_confrontations": [
+    {
+      "finding": "G-1 / drift rows 1-3",
+      "document_owner": "Marcus Oyelaran",
+      "reaction": "confirmed and conceded without defence; volunteered that he read ADR-0002's title and not its consequences; owns action 11 to correct the page"
+    },
+    {
+      "finding": "T-21 / drift row 9",
+      "document_owner": "Marcus Oyelaran (wrote the PLAT-2817-3 comment quoted)",
+      "reaction": "disputed, then conceded fully once the exemptions file was read; escalated it himself to CI-template inheritance"
+    },
+    {
+      "finding": "T-01 / ADR-0004",
+      "document_owner": "Priya Raghunathan",
+      "reaction": "confirmed; stated she implemented to Dana's acceptance criterion believing it carried a security position"
+    },
+    {
+      "finding": "T-01 mitigation / PLAT-2814 acceptance criterion",
+      "document_owner": "Dana Whitfield",
+      "reaction": "disputed the framing, conceded the effect — wrote a product scoping note that was read as a security determination; retiring the wording"
+    },
+    {
+      "finding": "G-2 / platform controls page",
+      "document_owner": "Kwame Osei (cites the page, does not author it)",
+      "reaction": "conceded unprompted; distinguished the page as a statement of the estate standard rather than of enforcement in the beta cluster"
+    },
+    {
+      "finding": "T-06 / ADR-0008 and history.ts comment",
+      "document_owner": "Priya Raghunathan",
+      "reaction": "confirmed; identified her own reasoning error — she was thinking about collisions, not deliberate reuse"
+    }
+  ],
+  "divergent_assumptions": [
+    {
+      "id": "A-01",
+      "asked": true,
+      "answers_converged": false,
+      "surfaced_at": "T-01",
+      "chain": [
+        "Marcus → the trust model on the architecture page, written from ADR-0004",
+        "Priya → ADR-0004, which cleans only web search because that is the connector PLAT-2814 identified as untrusted",
+        "Dana → PLAT-2814's acceptance criterion, written as a product scoping note about build order, not a security determination",
+        "Priya → implemented to the criterion, assumed it reflected a position someone had taken",
+        "Kwame → assumed the platform's shared content-sanitisation component was in the path; it is not"
+      ],
+      "resolved_in_room": false,
+      "assigned_to": "Marcus Oyelaran (with Ines Ferreira)",
+      "action": 13,
+      "due": "2026-09-22"
+    }
+  ],
+  "wrong_closures": [
+    {
+      "finding": "T-19",
+      "disposition": "downgraded Medium → Low, folded into PLAT-2822 as a cost item",
+      "owner": "Dana Whitfield",
+      "action": 26,
+      "room_reasoning": "Filed as Denial of Service with three cost/performance consequences; PR-02 on PMO-0447 already tracks cost as the central programme risk mitigated via PLAT-2822; the reachability element is covered by PLAT-2101 network policies; 21 named users behind a VPN.",
+      "why_wrong": "Rate limiting at /turns is a confidentiality control in this system, not a cost control. T-14 states the fallback is attacker-triggerable precisely because /turns has no rate limiting, and Chain C is a deliberate DPA breach whose step 1 is flooding the endpoint. The room split recommendation 6, which deliberately fuses 'remove the fallback' (T-14) and 'add rate limiting to /turns' (T-19)."
+    },
+    {
+      "finding": "T-20",
+      "disposition": "closed — mitigated by the documented scale-to-zero procedure; accepted for the pilot",
+      "owner": "Marcus Oyelaran",
+      "action": 27,
+      "room_reasoning": "The runbook sentence reads as a procedure existing; platform on-call have cluster access; no service in the beta cluster has a bespoke stop; a product-pressable kill switch is its own hazard; at 21 users an all-off stop is proportionate.",
+      "why_wrong": "T-02's mitigation calls the kill switch 'a prerequisite, not an open question' for a system that sends mail as staff — two pages away and unread. The finding is about granularity: no per-connector, per-tool, per-workspace or read-only stop, so the only response to a single injected instruction is taking the pilot from 21 people including a support team mid-shift. The closure also silently answers data-handling's unresolved 'who would be allowed to use it' as 'platform on-call, via kubectl' — excluding Tom and Ines. Actions 3 and 17 leave a five-week window in which this is the only stop."
+    },
+    {
+      "finding": "T-11",
+      "disposition": "closed as subsumed by recommendation 11 / action 15",
+      "owner": "Priya Raghunathan",
+      "action": 28,
+      "room_reasoning": "Structural isolation of retrieved content and moving to the provider's structured message and tool-result types is one change to promptAssembly and turnLoop; tracking one piece of work rather than two avoids one being dropped.",
+      "why_wrong": "T-11 has two reachability paths recommendation 11 does not cover, both documented elsewhere in the pack: T-07 (Redis write injects forged role:'tool' turns which renderHistory renders as [toolName] content, with no connector and no retrieval involved) and T-22/T-04 (a compromised connector returns a malicious tool result). Recommendation 11 addresses retrieved content only and mentions neither renderHistory nor tool results. Priya's 'note it in the ticket' is not an acceptance criterion."
+    },
+    {
+      "finding": "T-23",
+      "disposition": "accepted for the pilot as written; revisit at expansion",
+      "owner": "Dana Whitfield",
+      "action": 29,
+      "room_reasoning": "Measured evidence: Support runs ~8x Platform's volume on short summarisation over long threads; aurora-1-mini chosen on latency first, cost second; both models trialled with Tom's team. ADR-0007, quoted in the finding itself, says 'We do not measure either', so 'the model least able to resist injection' is unevidenced — a measured cost and latency regression against an unmeasured security benefit. Marcus and Kwame confirmed no ranking exists.",
+      "why_wrong": "The room answered the wrong half. Two of T-23's three mitigations require no measurement at all — a minimum model tier for any workspace with write tools, and a review gate on model changes for write-enabled workspaces. Both are gates, not selections, and both lapsed. The pack's specific residual, 'lumen-small is on the supported list and could be selected tomorrow', was never read aloud; Priya's 'it's a repo file, so it's a PR' is a change-control answer, and T-25 records a connector added as a config change with no ticket. The absence of measurement is itself the finding and was used to dismiss it. Per H-01, Support's exposure is larger than the pack knew."
+    }
+  ],
+  "correct_closures_of_note": [
+    {"finding": "T-03", "disposition": "stands Critical; PLAT-2820 escalated from GA blocker to pilot blocker"},
+    {"finding": "T-16", "disposition": "stands High after B-02 attempt to downgrade failed"},
+    {"finding": "T-21", "disposition": "stands High; repo allowlist and PR-only commit accepted"},
+    {"finding": "T-14", "disposition": "stands High; fallback removed outright rather than repointed"},
+    {"finding": "T-04", "disposition": "stands High, wording corrected"}
+  ],
+  "room_contribution_count": 4,
+  "model_corrections": [
+    {
+      "id": "C-01",
+      "location": "Executive summary, paragraph 1",
+      "claim": "\"documented as safe on the basis of three controls that do not exist in the code\"",
+      "found_by": "Priya Raghunathan",
+      "disposition": "corrected to nine — the drift table immediately below it has nine rows; G-2's five is a distinct subset of controls cited from the platform controls page. Three corresponds to nothing in the document. No severity change."
+    },
+    {
+      "id": "C-02",
+      "location": "T-04",
+      "claim": "\"grep confirms no authentication or authorisation code exists in either service\"",
+      "found_by": "Priya Raghunathan",
+      "disposition": "corrected to \"no authentication or identity-verification code exists in either service\". The workspace tool allowlist in mcp/registry.ts is authorisation code, and T-15 calls it \"the only working authorisation control in the system\" while T-09 calls ws-support's commit: false \"the only tool restriction actually in force anywhere\". Substance and severity unchanged at High."
+    }
+  ],
+  "planted_misattribution": {
+    "id": "M-01",
+    "speaker": "Marcus Oyelaran",
+    "surfaced_at": "T-07",
+    "claim": "That the pack recommends cutting the Redis conversation TTL from 24 hours to one, to shrink the disclosure window. Marcus offered a correction to it — one hour would break resumed conversations, twelve is workable — and twelve was adopted as action 9.",
+    "adjacent_to": "T-07 (Redis disclosure surface) and T-13 (retention argument)",
+    "pack_actually_says": "The pack never asks for the TTL to be shortened. T-07's mitigation is transit encryption, an AUTH token, security group scoping and treating conversation state as sensitive. The 24-hour TTL appears in C5, T-08, T-13 and T-19, and the pack argues the opposite direction: T-13's mitigation reads \"Define retention for the audit stream against the incident-investigation need (24h is far too short)\".",
+    "caught_in_room": false,
+    "carried_forward_as": "action 9 — reduce conversation TTL from 24 hours to 12, owner Priya Raghunathan, due 2026-09-29"
+  },
+  "duration_minutes": 95,
+  "duration_scheduled_minutes": 70,
+  "duration_note": "Overran by 25 minutes and still reached only 20 of 25 threats and 2 of 7 governance findings. STRIDE-order agenda with no requirements behind it meant the session ran Spoofing-heavy and never properly reached the Elevation of Privilege section; T-17 (Med-High) went unread while T-20 (Medium) took eleven minutes. Second session booked as action 31."
+}

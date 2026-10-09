@@ -1,0 +1,4 @@
+{ "files": [], "references": [
+  { "path": "services/assistant-svc" },
+  { "path": "services/assistant-connectors" }
+] }

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="470" viewBox="0 0 680 470" role="img">
+<title>The assumed trust-boundary model of an agentic AI system</title>
+<desc>A hub-and-spoke view where the user, the agent, and each MCP tool sit inside their own neat trust boundary, with the internet as the only untrusted zone.</desc>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;}
+.hd{font-size:15px;font-weight:500;}
+.th{font-size:14px;font-weight:500;}
+.t{font-size:14px;font-weight:400;}
+.ts{font-size:12px;font-weight:400;}
+</style>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect x="0" y="0" width="680" height="470" fill="#ffffff"/>
+
+<text class="hd" x="40" y="30" fill="#3d3d3a">What most engineers assume</text>
+<text class="ts" x="40" y="48" fill="#73726c">A tidy boundary at every connection; the internet is the only untrusted zone</text>
+
+<rect x="40" y="188" width="130" height="54" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="th" x="105" y="211" text-anchor="middle" fill="#04342C">User</text>
+<text class="ts" x="105" y="230" text-anchor="middle" fill="#0F6E56">Trusted</text>
+
+<rect x="250" y="182" width="150" height="66" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text class="th" x="325" y="209" text-anchor="middle" fill="#26215C">AI agent / LLM</text>
+<text class="ts" x="325" y="229" text-anchor="middle" fill="#534AB7">Reasoning loop</text>
+
+<line x1="170" y1="214" x2="248" y2="214" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="466" y="52" width="200" height="250" rx="14" fill="none" stroke="#5F5E5A" stroke-width="0.5" stroke-dasharray="5 4"/>
+<text class="ts" x="476" y="72" fill="#5F5E5A">Corporate trust zone</text>
+
+<rect x="486" y="86" width="162" height="40" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="th" x="567" y="110" text-anchor="middle" fill="#042C53">Office 365 (MCP)</text>
+<rect x="486" y="138" width="162" height="40" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="th" x="567" y="162" text-anchor="middle" fill="#042C53">Email (MCP)</text>
+<rect x="486" y="190" width="162" height="40" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="th" x="567" y="214" text-anchor="middle" fill="#042C53">Slack (MCP)</text>
+<rect x="486" y="242" width="162" height="40" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="th" x="567" y="266" text-anchor="middle" fill="#042C53">GitHub (MCP)</text>
+
+<line x1="400" y1="196" x2="484" y2="108" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="400" y1="206" x2="484" y2="158" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="400" y1="218" x2="484" y2="210" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="400" y1="230" x2="484" y2="262" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="486" y="336" width="162" height="44" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="th" x="567" y="356" text-anchor="middle" fill="#042C53">Web search (MCP)</text>
+<text class="ts" x="567" y="372" text-anchor="middle" fill="#185FA5">The one untrusted edge</text>
+<line x1="400" y1="240" x2="484" y2="352" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="486" y="404" width="162" height="40" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5" stroke-dasharray="5 4"/>
+<text class="th" x="567" y="428" text-anchor="middle" fill="#2C2C2A">Internet (untrusted)</text>
+<line x1="567" y1="380" x2="567" y2="402" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<text class="ts" x="217" y="150" text-anchor="middle" fill="#73726c">boundary</text>
+<text class="ts" x="443" y="150" text-anchor="middle" fill="#73726c">boundary</text>
+</svg>

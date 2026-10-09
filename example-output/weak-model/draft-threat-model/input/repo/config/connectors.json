@@ -1,0 +1,37 @@
+{
+  "o365": {
+    "id": "o365",
+    "kind": "vendor-mcp",
+    "capabilities": ["read_documents", "read_calendar", "read_mail", "send_mail"],
+    "contentIsExternal": false,
+    "notes": "Documents, calendar and mail through one vendor server."
+  },
+  "slack": {
+    "id": "slack",
+    "kind": "vendor-mcp",
+    "capabilities": ["read_channels", "read_dms", "post_message"],
+    "contentIsExternal": false,
+    "notes": "Installed to the workspace with the full scope set during the prototype. Narrow before GA, PLAT-2814-6."
+  },
+  "github": {
+    "id": "github",
+    "kind": "vendor-mcp",
+    "capabilities": ["read_issues", "read_code", "comment_issue", "update_issue", "commit"],
+    "contentIsExternal": false,
+    "notes": "Org-level app."
+  },
+  "confluence": {
+    "id": "confluence",
+    "kind": "vendor-mcp",
+    "capabilities": ["read_pages"],
+    "contentIsExternal": false,
+    "notes": "Added 2026-07-14 for the Support pilot. Read only. No ticket; it was a config change."
+  },
+  "websearch": {
+    "id": "websearch",
+    "kind": "community-mcp",
+    "capabilities": ["search"],
+    "contentIsExternal": true,
+    "notes": "Community server, runs in cluster, calls a search API. Output passes the sanitiser."
+  }
+}

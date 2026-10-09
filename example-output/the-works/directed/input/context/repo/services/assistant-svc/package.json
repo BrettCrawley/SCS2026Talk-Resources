@@ -1,0 +1,4 @@
+{ "name": "assistant-svc", "version": "0.4.1", "private": true,
+  "main": "dist/index.js",
+  "scripts": { "dev": "tsx src/index.ts", "build": "tsc -b" },
+  "dependencies": { "express": "^4.19.2", "ioredis": "^5.4.1", "undici": "^6.19.2" } }

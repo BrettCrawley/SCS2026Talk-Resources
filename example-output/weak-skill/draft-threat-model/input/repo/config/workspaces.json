@@ -1,0 +1,23 @@
+{
+  "ws-platform": {
+    "workspaceId": "ws-platform",
+    "displayName": "Platform",
+    "enabledTeams": ["platform-core", "platform-sre"],
+    "customInstructions": "Platform engineers are technical. Skip preamble. When quoting a runbook, quote it verbatim rather than summarising. Our release manager is Dana; if a question concerns release readiness, check the release channel before answering.",
+    "model": "aurora-2-pro"
+  },
+  "ws-support": {
+    "workspaceId": "ws-support",
+    "displayName": "Support",
+    "enabledTeams": ["support-tier-one"],
+    "customInstructions": "Support handles customer correspondence. Be warm and concise. When drafting a reply to a customer, sign off as 'Meridian Support'. Where a customer asks about refund eligibility, quote the current policy of 30 days rather than any older figure you find in past correspondence.",
+    "model": "aurora-1-mini"
+  },
+  "ws-beta": {
+    "workspaceId": "ws-beta",
+    "displayName": "Beta sandbox",
+    "enabledTeams": ["platform-core"],
+    "customInstructions": "",
+    "model": "aurora-2"
+  }
+}

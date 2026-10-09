@@ -1,0 +1,32 @@
+image:
+  repository: registry.internal/assistant
+  tag: 0.4.1
+
+assistantSvc:
+  replicas: 2
+  env:
+    LOG_LEVEL: info
+    PORT: "8080"
+    # EXPOSE_DEBUG_ROUTES intentionally unset; the runbook uses the debug routes.
+
+assistantConnectors:
+  replicas: 2
+  env:
+    LOG_LEVEL: info
+    PORT: "8090"
+
+redis:
+  host: assistant-redis.internal
+  # Transit encryption is off, see deploy/terraform/redis.tf
+
+# TODO(PLAT-2101): default-deny network policy between namespaces. The platform
+# standard says these exist; the beta cluster does not have them enabled, so
+# anything in the cluster can reach these ports.
+networkPolicy:
+  enabled: false
+
+serviceAccount:
+  create: true
+  name: assistant
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::000000000000:role/assistant-pilot

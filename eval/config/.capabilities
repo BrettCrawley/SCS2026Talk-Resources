@@ -1,0 +1,3 @@
+max_turns=yes
+max_budget_usd=yes
+disallowed_tools=yes

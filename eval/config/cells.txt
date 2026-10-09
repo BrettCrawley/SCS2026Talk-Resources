@@ -1,0 +1,27 @@
+# Evaluation matrix.
+# cell_id | context_dir | skill_set | model_var | prompt_file | engine
+#
+# The recipe has four ingredients: context, the right method, the right model,
+# and the human validation session. Each cell removes or degrades one.
+#
+# engine is "claude" (Claude Code, `claude -p`) or "cursor" (Cursor CLI,
+# `agent -p`). Cursor loads skills from .claude/skills as well as .cursor/skills,
+# so the same skill directories work under both.
+#
+# run1  thin context        what happens without the material
+# run2  weak skill          what happens without the method
+# run3  weak model          what happens without the reasoning
+# run4  everything          the target state
+# run5  rich, no repo       optional. Isolates what the code contributes
+# run6  Cursor + Composer   optional but recommended: what teams actually run
+#
+# run6 is the same context and the same skills as run4, on a different engine
+# and a different model. If teams are on Composer, this cell is not a
+# hypothetical, it is a measurement of current practice.
+
+run1|thin|strong|FRONTIER_MODEL|phase-a-strong.md|claude
+run2|rich|weak|FRONTIER_MODEL|phase-a-weak.md|claude
+run3|rich|strong|CHEAP_MODEL|phase-a-strong.md|claude
+run4|rich|strong|FRONTIER_MODEL|phase-a-strong.md|claude
+run5|rich-no-repo|strong|FRONTIER_MODEL|phase-a-strong.md|claude
+# run6|rich|strong|CURSOR_MODEL|phase-a-strong.md|cursor

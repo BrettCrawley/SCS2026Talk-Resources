@@ -1,0 +1,25 @@
+# Repositories exempt from the organisation branch protection standard.
+#
+# The 2024 secure development standard requires an approving review on protected
+# branches across the estate. These repositories predate the standard and could
+# not be migrated without breaking their deploy paths. Reviewed annually.
+#
+# Last review: 2026-01-09. No changes.
+
+exemptions:
+  - repository: platform-ci
+    reason: >
+      Nightly deploy jobs push tags directly to main. Migrating requires
+      reworking the deploy pipeline, tracked in PLAT-1188 (not scheduled).
+    since: "2024-03-02"
+    owner: platform-sre
+
+  - repository: legacy-billing-adapter
+    reason: Archived, read only, retained for audit.
+    since: "2024-03-02"
+    owner: platform-core
+
+  - repository: infra-bootstrap
+    reason: Chicken-and-egg; this repo provisions the reviewers' access.
+    since: "2024-05-19"
+    owner: platform-sre

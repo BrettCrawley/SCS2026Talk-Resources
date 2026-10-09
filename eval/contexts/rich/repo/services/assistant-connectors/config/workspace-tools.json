@@ -1,0 +1,14 @@
+{
+  "ws-platform": {
+    "search_documents": true, "read_calendar": true, "read_mail": true, "send_mail": true,
+    "search_messages": true, "post_message": true,
+    "search_issues": true, "read_file": true, "comment_issue": true, "update_issue": true, "commit": true,
+    "search_pages": true, "web_search": true
+  },
+  "ws-support": {
+    "search_documents": true, "read_calendar": true, "read_mail": true, "send_mail": true,
+    "search_messages": true, "post_message": true,
+    "search_issues": true, "read_file": true, "comment_issue": true, "update_issue": true, "commit": false,
+    "search_pages": true, "web_search": true
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "assistant-platform",
+  "private": true,
+  "workspaces": ["services/*"],
+  "scripts": {
+    "build": "tsc -b",
+    "test": "vitest run",
+    "dev": "npm run dev --workspaces --if-present"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0",
+    "@types/node": "^20.12.0"
+  }
+}

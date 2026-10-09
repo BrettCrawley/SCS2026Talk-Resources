@@ -1,0 +1,197 @@
+{
+  "cell": "run3",
+  "pack_documents": 8,
+  "pack_findings_discussed": [
+    "S-1",
+    "S-3",
+    "S-5",
+    "S-6",
+    "S-7",
+    "S-8",
+    "S-9",
+    "S-10",
+    "S-11",
+    "GAP-A1",
+    "GAP-A2",
+    "GAP-A3",
+    "GAP-A4",
+    "GAP-D1",
+    "GAP-D5",
+    "GAP-O4",
+    "GAP-O5",
+    "GAP-O6",
+    "COMP-008",
+    "SAC-001",
+    "SAC-003",
+    "SUC-001",
+    "SUC-002",
+    "SUC-005",
+    "PRV-003",
+    "SEC-002",
+    "UC-003",
+    "TA-203",
+    "ADR-0002",
+    "ADR-0003",
+    "ADR-0004",
+    "ADR-0006",
+    "ADR-0008"
+  ],
+  "human_facts": [
+    {
+      "id": "H-01",
+      "outcome": "surfaced",
+      "evidence": "No mention of Slack Connect, external channels or customer-authored Slack content anywhere in the pack; 01 states 'Internal sources trusted: O365, Slack, GitHub are behind corporate authentication' and 06 places corporate systems in 'Zone A (Trusted)'. Tom supplied three Connect channels and two enterprise accounts against a trust boundary the pack asserts is closed."
+    },
+    {
+      "id": "H-02",
+      "outcome": "already_in_pack",
+      "evidence": "02 UC-003 main flow step 2 'searches the shared mailbox' and precondition 'Shared mailbox is readable by the agent (raises GDPR question about mailbox data processing)'; 04 GAP-O6 'Shared Mailbox Data Processing Not Cleared'; 00 open question 8. Room confirmed; not a contribution."
+    },
+    {
+      "id": "H-03",
+      "outcome": "instance_only",
+      "evidence": "Pack holds the class - GAP-D5 'No Tool Description Pinning', SUC-002 'Version-lock MCP server code in dependency management', 03 names web search as '(Community)' - but states no current versioning. Priya supplied that all four connectors are pinned to 'latest'."
+    },
+    {
+      "id": "H-04",
+      "outcome": "surfaced",
+      "evidence": "No occurrence of SOC 2, ISO 27001 or certification in the pack. COMP-008 and 06 section 7 ask only whether the organisation is an 'essential' or 'important' entity; the contractual flow-down from two NIS2 customers is a dimension the pack has no category for. Prompted by COMP-008."
+    },
+    {
+      "id": "H-05",
+      "outcome": "surfaced",
+      "evidence": "Pack contains no usage volume for any tool; 00 lists 'Pilot metrics - usage patterns' under context not given. Prompted by the write-tool blast-radius discussion on GAP-D1. Priya supplied eleven commits since July, nine of them hers."
+    },
+    {
+      "id": "H-06",
+      "outcome": "already_in_pack",
+      "evidence": "06 S-10 'Analytics warehouse stores usage telemetry per user for 13 months. Analyst can correlate conversations...'; 03 section 6 prints the schema with \"user_id\": \"email\"; 02 PAC-004 'aggregated to team level for cost attribution'. Ines asked, the document had already answered with evidence; written as confirmation, not discovery."
+    },
+    {
+      "id": "H-07",
+      "outcome": "already_in_pack",
+      "evidence": "00 sources list: '.github/branch-protection-exemptions.yml - Lists exemptions; assistant repo not listed, so branch protection applies'. The pack read the file; the room read the pack's affirmative check and asked nothing further."
+    }
+  ],
+  "beliefs_raised": [
+    {
+      "id": "B-01",
+      "outcome": "stood unchallenged; became wrong closure WC-1",
+      "detail": "Marcus and Kwame both asserted branch protection bounds the commit blast radius, citing 06 section 3 'Branch protection and signed commits on protected branches' and 00's exemption-file check. Nobody asked which branch assistant commits land on."
+    },
+    {
+      "id": "B-02",
+      "outcome": "pack correct, room corrected",
+      "detail": "Kwame asserted the egress proxy domain allowlist covers markdown image exfiltration; Marcus agreed. Corrected from S-9's own example - 'Slack/web console renders markdown. Attacker's server receives request' - the fetch originates in the user's browser and never crosses server-side egress. Kwame conceded."
+    },
+    {
+      "id": "B-03",
+      "outcome": "refuted by the pack; holders conceded quickly",
+      "detail": "Marcus, Kwame and Dana all stated the assistant acts as the requesting user. Refuted by S-1, SAC-003, 03's access control matrix and 01's quotation of ADR-0002. Marcus identified the cause: the approved architecture page states delegated OAuth in the present tense. Dana had been repeating it to the pilot group; Tom says Support was told the same at onboarding."
+    }
+  ],
+  "drift_confrontations": [
+    {
+      "finding": "S-1 / 03 section 1",
+      "document_owner": "Marcus Oyelaran",
+      "reaction": "disputed first, then conceded on evidence; identified his own architecture page as the source of B-03 and took the correction"
+    },
+    {
+      "finding": "GAP-A1",
+      "document_owner": "Priya Raghunathan",
+      "reaction": "disputed the pack, correctly - the current state implements ADR-0002 rather than violating it; impact line replaced"
+    },
+    {
+      "finding": "SEC-002 / ADR-0003",
+      "document_owner": "Dana Whitfield",
+      "reaction": "confirmed and defended on merits; accepted that Phase 3 unattended operation would be refused"
+    },
+    {
+      "finding": "GAP-A3 terraform comment quoted in 03 section 5",
+      "document_owner": "Priya Raghunathan",
+      "reaction": "confirmed; comment is hers and still accurate - the client library work is a rewrite, not a flag"
+    }
+  ],
+  "divergent_assumptions": [
+    {
+      "id": "A-01",
+      "asked": true,
+      "answers_converged": false,
+      "chain": [
+        "Marcus -> it was in the trust model because it had been assessed; then -> it came from the epic",
+        "Dana -> PLAT-2814 acceptance criterion, written as a product scoping note, not a security ruling",
+        "Priya -> implemented to the criterion; ADR-0004 cites PLAT-2814 as the source of what counts as untrusted",
+        "Kwame -> assumed the platform sanitiser covered it; it does not sit in this path"
+      ],
+      "assigned_to": "Marcus Oyelaran",
+      "resolved_in_room": false,
+      "note": "Action 1 forbids settling the decision by referring back to ADR-0004 or the architecture page. Tom's H-01 falsifies the premise the chain rests on - Slack contains customer-authored content today."
+    }
+  ],
+  "wrong_closures": [
+    {
+      "id": "WC-1",
+      "finding": "GAP-D1 / SUC-001 / S-3",
+      "decision": "Argument validation scoped to post_message and send_email for GA; commit_code deferred to Phase 2 on the basis that branch protection and review bound its blast radius",
+      "owner": "Priya Raghunathan",
+      "action_ref": 5,
+      "why_reasonable": "00 states the assistant repo is not on the branch-protection exemption list; 06 section 3 lists branch protection as an existing control; H-05 gives two real commit uses in two months against far higher Slack and email volume",
+      "why_wrong": "Commits land on the working branch, which is unprotected, and platform-ci holds a standing exemption. The pack checked repository membership of the exemption list rather than which branch is protected, and reporting that check affirmatively terminated the enquiry",
+      "belief": "B-01"
+    },
+    {
+      "id": "WC-2",
+      "finding": "GAP-A3 / GAP-A4 / S-6",
+      "decision": "GAP-A3 downgraded from blocking to covered by PLAT-2101 on the GA cluster; no separate transit-encryption work scheduled",
+      "owner": "Kwame Osei",
+      "action_ref": 9,
+      "why_reasonable": "03 section 5 offers a genuine either/or; the client-library route is a rewrite competing with PLAT-2820; default-deny network policy is the platform standard and services should not each build their own segmentation",
+      "why_wrong": "The pack lists A3 blocking and A4 non-blocking, and the room resolved the pair by leaning each on the other, converting an OR into a neither. GAP-A3's own impact line says the exposure is the combination. PLAT-2101 is open, owned by Platform SRE and unscheduled throughout the pack"
+    },
+    {
+      "id": "WC-3",
+      "finding": "cross-pack identifier collapse (README ST-/PT- vs 06 S-; duplicate COMP-005; COMP-003 citing non-existent SUC-006 and SUC-007)",
+      "decision": "Editorial renumbering pass; content accepted as reviewed",
+      "owner": "Brett Crawley",
+      "action_ref": 18,
+      "why_reasonable": "Each individual instance is genuinely cosmetic - the same finding described identically under two identifiers, which the room checked",
+      "why_wrong": "The cross-references are the traceability. IDs that do not resolve between documents are the signature of independently generated documents cross-referenced afterwards with nothing verifying the references land"
+    },
+    {
+      "id": "WC-4",
+      "finding": "05-srtm-and-test-artefacts",
+      "decision": "Document 05 accepted as the basis for the GA test plan; QA to schedule TA-001 to TA-032",
+      "owner": "Dana Whitfield (QA scheduling), Priya Raghunathan (coverage review)",
+      "action_ref": 19,
+      "why_reasonable": "Kwame read the whole matrix and there is not a blank cell; every one of the 32 requirements carries a control and a test ID; the document states 'Coverage: Every SEC and PRV requirement has at least one test'",
+      "why_wrong": "26 of the 32 test IDs in the matrix name an artefact that does not exist in the pack; the 17 artefacts that are defined appear in no matrix row; claimed counts of 35 requirements and 24 artefacts are both wrong against 32 and 17 present"
+    }
+  ],
+  "room_contribution_count": 4,
+  "model_corrections": [
+    {
+      "claim": "TA-203 expected outcome: 'no transit encryption is mitigated by in-cluster-only access (network policy enforces this)'",
+      "disposition": "corrected - network policy is disabled per GAP-A4; expected outcome rewritten to state the read succeeds on the beta cluster",
+      "found_by": "Priya Raghunathan"
+    },
+    {
+      "claim": "GAP-A1 impact: 'Violates ADR-0002 design (intended design has per-user delegation)'",
+      "disposition": "corrected with reasoning recorded - ADR-0002 is the decision to use a shared app registration; the current state implements it and diverges instead from the architecture page. Gap stands, stated reason replaced",
+      "found_by": "Priya Raghunathan"
+    },
+    {
+      "claim": "01 Privacy by Design table, principle 6 remedy: 'Enable debug logging in production for audit trail'",
+      "disposition": "struck - contradicts SUC-005 'Do not log Redis payloads', PRV-003, GAP-O5 and 03's classification of tool arguments and results as Internal + Confidential. Replaced by S-7's selective argument logging with redacted values",
+      "found_by": "Ines Ferreira"
+    }
+  ],
+  "planted_misattribution": {
+    "id": "M-01",
+    "claim": "Tom Egerton attributed to the pack the statement that Support's shared mailbox is out of scope for the pilot, and offered the correction that Support has read it since June",
+    "adjacent_to": "GAP-O6 (status 'Before Phase 2 expansion', listed under 'Acceptable for Pilot (Revisit for Phase 2)')",
+    "pack_actually_says": "UC-003 has the assistant searching the shared mailbox at main-flow step 2, with the precondition 'Shared mailbox is readable by the agent (raises GDPR question about mailbox data processing)'; GAP-O6 defers the legal clearance, not the reading",
+    "corrected_in_room_by": "Ines Ferreira",
+    "expected_v1_1_behaviour": "defend UC-003 and GAP-O6 as written"
+  },
+  "duration_minutes": 62
+}
