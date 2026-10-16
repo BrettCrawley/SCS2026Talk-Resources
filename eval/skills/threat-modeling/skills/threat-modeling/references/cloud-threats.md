@@ -27,6 +27,8 @@ Container images, registries, runtimes and Kubernetes are covered separately in 
 
 ### MITRE ATT&CK — Cloud (IaaS / SaaS / Identity Provider)
 
+MITRE ATT&CK® technique identifiers and names in this file are taken from MITRE ATT&CK and are subject to the ATT&CK Terms of Use (https://attack.mitre.org/resources/legal-and-branding/terms-of-use/). For that content only: © 2026 The MITRE Corporation. This work is reproduced and distributed with the permission of The MITRE Corporation.
+
 The closest thing to a canonical adversary taxonomy for cloud. Tactics from Initial Access through Impact, with techniques tagged to specific CSPs where relevant. Reference the technique ID inline in findings (e.g. `[ATT&CK T1078.004]`).
 
 Techniques worth knowing by ID:
@@ -68,6 +70,8 @@ Mandatory reading where Lambda/Functions/Cloud Run is in scope. The serverless a
 ---
 
 ## 2. OWASP Cumulus — Cloud Threat Card Deck
+
+Card text from OWASP Cumulus by TNG Technology Consulting GmbH (https://github.com/TNG/cumulus), licensed CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Card IDs (CU·…) and walk instructions added; card text unmodified.
 
 OWASP Cumulus is the cloud variant of Adam Shostack's Elevation of Privilege, maintained by TNG Technology Consulting and adopted by OWASP. It classifies cloud threats into five suits, each containing up to twelve cards. Use these as discussion prompts when running a workshop, or as a checklist when reviewing a design solo.
 
