@@ -1,0 +1,46 @@
+{
+  "eval_id": 1,
+  "eval_name": "healthcare-prescriptions",
+  "run_type": "without_skill",
+  "output_file": "/sessions/focused-dazzling-meitner/secure-privacy-by-design-workspace/iteration-1/eval-1-healthcare-prescriptions/without_skill/outputs/healthcare-prescriptions-security-privacy-analysis.md",
+  "expectations": [
+    {
+      "text": "Output references GDPR Article 9 or 'special category' data in relation to health information",
+      "passed": true,
+      "evidence": "Searching for GDPR Art. 9 or 'special category'"
+    },
+    {
+      "text": "Output identifies security threats specific to the HL7 FHIR API integration",
+      "passed": true,
+      "evidence": "Searching for FHIR-related threat/abuse content"
+    },
+    {
+      "text": "Output identifies IDOR or cross-patient data access as a security abuse case",
+      "passed": true,
+      "evidence": "Searching for IDOR or cross-patient access risk"
+    },
+    {
+      "text": "Output identifies privacy risks in SMS/email notification channels (e.g. health info in notifications)",
+      "passed": true,
+      "evidence": "Searching for notification channel privacy risk"
+    },
+    {
+      "text": "Output contains a Security Requirements Traceability Matrix as a markdown table",
+      "passed": false,
+      "evidence": "Searching for SRTM table (| Req ID header)"
+    },
+    {
+      "text": "Output contains defined test artifacts (TA-XXX IDs)",
+      "passed": false,
+      "evidence": "Found TA-0XX IDs: 0"
+    },
+    {
+      "text": "Output references NHS Digital standards or UK-specific healthcare compliance",
+      "passed": true,
+      "evidence": "Searching for NHS or UK-specific standards reference"
+    }
+  ],
+  "pass_count": 5,
+  "total_count": 7,
+  "pass_rate": 0.714
+}

@@ -1,0 +1,6 @@
+{
+  "eval_id": 2,
+  "eval_name": "p2p-marketplace",
+  "prompt": "I want to build a peer-to-peer marketplace where people can lend and borrow physical items (tools, camping gear, etc.) from their neighbours. Core features:\n\n- Users list items with photos, availability calendar, and a daily rental price\n- Borrowers search by location and category, request to rent\n- Lenders approve/decline requests\n- Payment handled by Stripe (we never touch card data directly)\n- Both parties rate each other after a transaction\n- Users can message each other within the app\n- Profile page shows public rating, listed items, and member since date\n\nI'm a solo developer building an MVP, so I want to focus on the most important security and privacy stuff first without getting overwhelmed. Keep the analysis focused on the highest-priority risks.",
+  "assertions": []
+}

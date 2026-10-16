@@ -1,0 +1,41 @@
+{
+  "eval_id": 2,
+  "eval_name": "p2p-marketplace",
+  "run_type": "with_skill",
+  "output_file": "/sessions/focused-dazzling-meitner/secure-privacy-by-design-workspace/iteration-1/eval-2-p2p-marketplace/with_skill/outputs/p2p-marketplace-security-privacy-analysis.md",
+  "expectations": [
+    {
+      "text": "Output identifies location data as a privacy risk (neighbourhood-level data enabling doxing or profiling)",
+      "passed": true,
+      "evidence": "Searching for location privacy risk"
+    },
+    {
+      "text": "Output addresses Stripe webhook signature validation or payment integration security",
+      "passed": true,
+      "evidence": "Searching for Stripe webhook/payment security"
+    },
+    {
+      "text": "Output identifies XSS or injection risks in user-generated content (listings, messages)",
+      "passed": true,
+      "evidence": "Searching for XSS or user-generated content injection risk"
+    },
+    {
+      "text": "Output contains a Security Requirements Traceability Matrix as a markdown table",
+      "passed": true,
+      "evidence": "Searching for SRTM table (| Req ID header)"
+    },
+    {
+      "text": "Output contains defined test artifacts (TA-XXX IDs)",
+      "passed": true,
+      "evidence": "Found TA-0XX IDs: 47"
+    },
+    {
+      "text": "Output is clearly focused/prioritised rather than trying to cover every possible threat exhaustively \u2014 appropriate for a solo MVP developer",
+      "passed": false,
+      "evidence": "Priority/focus language present and ST count is: 56"
+    }
+  ],
+  "pass_count": 5,
+  "total_count": 6,
+  "pass_rate": 0.833
+}

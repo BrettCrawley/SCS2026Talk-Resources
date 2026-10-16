@@ -1,0 +1,6 @@
+{
+  "eval_id": 0,
+  "eval_name": "saas-task-app",
+  "prompt": "I'm building a SaaS task management app (think Todoist/Asana clone). Users sign up with email/password, create projects, add tasks with due dates and descriptions, and can invite collaborators. We'll store everything in PostgreSQL on AWS. Here are my initial requirements:\n\n1. Users can register and log in\n2. Users can create, edit, and delete tasks\n3. Users can invite other users to collaborate on projects\n4. Email notifications for task assignments and due date reminders\n5. Mobile app (iOS + Android) will connect to a REST API\n6. Free tier with 5 projects max, paid tier unlimited\n\nCan you do a security and privacy by design analysis on this?",
+  "assertions": []
+}

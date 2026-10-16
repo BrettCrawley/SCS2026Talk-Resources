@@ -1,0 +1,15 @@
+{
+  "eval_id": 1,
+  "eval_name": "healthcare-prescriptions",
+  "prompt": "We're adding a new feature to our existing healthcare patient portal: online prescription refill requests. Patients will be able to:\n- View their current prescriptions (pulled from our EHR system via HL7 FHIR API)\n- Request a refill, which creates a task in the GP's queue\n- Receive a notification (email or SMS) when the GP has approved or declined\n- GPs can add a note to declined requests\n\nWe're UK-based, so GDPR applies. We also follow NHS Digital standards. The portal already handles authentication (NHS login integration) but this is a new module.\n\nInitial requirements:\n1. Patients can view active prescriptions\n2. Patients can submit a refill request\n3. GPs receive and can action refill requests\n4. Patients receive notifications on request status changes\n5. Integration with existing EHR via FHIR API",
+  "assertions": [
+    {"name": "references-gdpr-special-category", "description": "Output references GDPR Article 9 or 'special category' data in relation to health information"},
+    {"name": "identifies-fhir-api-threat", "description": "Output identifies security threats specific to the HL7 FHIR API integration"},
+    {"name": "identifies-cross-patient-access-risk", "description": "Output identifies IDOR or cross-patient data access as a security abuse case"},
+    {"name": "contains-notification-privacy-risk", "description": "Output identifies privacy risks in SMS/email notification channels"},
+    {"name": "contains-srtm-table", "description": "Output contains a Security Requirements Traceability Matrix as a markdown table"},
+    {"name": "contains-test-artifacts", "description": "Output contains defined test artifacts (TA-XXX IDs)"},
+    {"name": "references-nhs-or-uk-standards", "description": "Output references NHS Digital standards or UK-specific healthcare compliance"},
+    {"name": "addresses-cra-applicability", "description": "Output explicitly assesses CRA (Cyber Resilience Act) applicability — either identifying it as in scope, out of scope, or flagging it for legal review"}
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "eval_id": 1,
+  "eval_name": "healthcare-prescriptions",
+  "run_type": "old_skill",
+  "expectations": [
+    {
+      "text": "Output references GDPR Article 9 or 'special category' data in relation to health information",
+      "passed": true,
+      "evidence": "checked: references-gdpr-special-category"
+    },
+    {
+      "text": "Output identifies security threats specific to the HL7 FHIR API integration",
+      "passed": true,
+      "evidence": "checked: identifies-fhir-api-threat"
+    },
+    {
+      "text": "Output identifies IDOR or cross-patient data access as a security abuse case",
+      "passed": true,
+      "evidence": "checked: identifies-cross-patient-access-risk"
+    },
+    {
+      "text": "Output identifies privacy risks in SMS/email notification channels",
+      "passed": true,
+      "evidence": "checked: contains-notification-privacy-risk"
+    },
+    {
+      "text": "Output contains a Security Requirements Traceability Matrix as a markdown table",
+      "passed": true,
+      "evidence": "checked: contains-srtm-table"
+    },
+    {
+      "text": "Output contains defined test artifacts (TA-XXX IDs)",
+      "passed": true,
+      "evidence": "checked: contains-test-artifacts"
+    },
+    {
+      "text": "Output references NHS Digital standards or UK-specific healthcare compliance",
+      "passed": true,
+      "evidence": "checked: references-nhs-or-uk-standards"
+    },
+    {
+      "text": "Output explicitly assesses CRA (Cyber Resilience Act) applicability \u2014 either identifying it as in scope, out of scope, or flagging it for legal review",
+      "passed": false,
+      "evidence": "checked: addresses-cra-applicability"
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 1,
+    "total": 8,
+    "pass_rate": 0.875
+  }
+}

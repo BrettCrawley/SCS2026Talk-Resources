@@ -12,11 +12,13 @@ talk/            what goes in front of the audience
 eval/            the evaluation, and everything needed to reproduce it
   README.md        how to run it
   contexts/        thin, rich, rich-no-repo. The repo lives under rich/
+  directed/        the scenarios for a directed run
   prompts/         the four prompts, written to be shown to attendees
-  skills/weak/     the single-pass comparison skill
+  skills           the three skill chain, the weak skill and the session transcript skill
   validation/      session transcripts, one per run
   bin/, config/    harness
   results/         output lands here
+example-output/  example output from each run
 facilitator/     answer keys. Not for distribution
 ```
 

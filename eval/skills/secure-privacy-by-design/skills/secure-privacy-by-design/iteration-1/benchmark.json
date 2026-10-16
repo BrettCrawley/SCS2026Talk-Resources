@@ -1,0 +1,383 @@
+{
+  "metadata": {
+    "skill_name": "secure-privacy-by-design",
+    "skill_path": "<path/to/skill>",
+    "executor_model": "<model-name>",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-03-31T07:19:17Z",
+    "evals_run": [
+      0,
+      1,
+      2
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 0,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "time_seconds": 0.0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output contains a Security Requirements Traceability Matrix as a markdown table",
+          "passed": true,
+          "evidence": "Searching for SRTM table (| Req ID header)"
+        },
+        {
+          "text": "Output contains STRIDE threat analysis with at least 3 specific threats (ST-XXX IDs)",
+          "passed": true,
+          "evidence": "Found ST-0XX IDs: 105"
+        },
+        {
+          "text": "Output contains LINDDUN privacy threat analysis with PT-XXX IDs",
+          "passed": true,
+          "evidence": "Found PT-0XX IDs: 56"
+        },
+        {
+          "text": "Output contains security abuse cases with SAC-XXX IDs",
+          "passed": true,
+          "evidence": "Found SAC-0XX IDs: 74"
+        },
+        {
+          "text": "Output contains privacy abuse cases with PAC-XXX IDs",
+          "passed": true,
+          "evidence": "Found PAC-0XX IDs: 39"
+        },
+        {
+          "text": "Output contains refined requirements with [NEW] items beyond the original 6",
+          "passed": true,
+          "evidence": "Searching for [NEW] requirement markers"
+        },
+        {
+          "text": "Output contains defined test artifacts (TA-XXX IDs)",
+          "passed": true,
+          "evidence": "Found TA-0XX IDs: 126"
+        },
+        {
+          "text": "Output contains both security use cases (SUC-XXX) and privacy use cases (PUC-XXX)",
+          "passed": true,
+          "evidence": "SUC IDs: 58, PUC IDs: 39"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 7,
+        "failed": 0,
+        "total": 7,
+        "time_seconds": 0.0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output references GDPR Article 9 or 'special category' data in relation to health information",
+          "passed": true,
+          "evidence": "Searching for GDPR Art. 9 or 'special category'"
+        },
+        {
+          "text": "Output identifies security threats specific to the HL7 FHIR API integration",
+          "passed": true,
+          "evidence": "Searching for FHIR-related threat/abuse content"
+        },
+        {
+          "text": "Output identifies IDOR or cross-patient data access as a security abuse case",
+          "passed": true,
+          "evidence": "Searching for IDOR or cross-patient access risk"
+        },
+        {
+          "text": "Output identifies privacy risks in SMS/email notification channels (e.g. health info in notifications)",
+          "passed": true,
+          "evidence": "Searching for notification channel privacy risk"
+        },
+        {
+          "text": "Output contains a Security Requirements Traceability Matrix as a markdown table",
+          "passed": true,
+          "evidence": "Searching for SRTM table (| Req ID header)"
+        },
+        {
+          "text": "Output contains defined test artifacts (TA-XXX IDs)",
+          "passed": true,
+          "evidence": "Found TA-0XX IDs: 70"
+        },
+        {
+          "text": "Output references NHS Digital standards or UK-specific healthcare compliance",
+          "passed": true,
+          "evidence": "Searching for NHS or UK-specific standards reference"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.8333,
+        "passed": 5,
+        "failed": 1,
+        "total": 6,
+        "time_seconds": 0.0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output identifies location data as a privacy risk (neighbourhood-level data enabling doxing or profiling)",
+          "passed": true,
+          "evidence": "Searching for location privacy risk"
+        },
+        {
+          "text": "Output addresses Stripe webhook signature validation or payment integration security",
+          "passed": true,
+          "evidence": "Searching for Stripe webhook/payment security"
+        },
+        {
+          "text": "Output identifies XSS or injection risks in user-generated content (listings, messages)",
+          "passed": true,
+          "evidence": "Searching for XSS or user-generated content injection risk"
+        },
+        {
+          "text": "Output contains a Security Requirements Traceability Matrix as a markdown table",
+          "passed": true,
+          "evidence": "Searching for SRTM table (| Req ID header)"
+        },
+        {
+          "text": "Output contains defined test artifacts (TA-XXX IDs)",
+          "passed": true,
+          "evidence": "Found TA-0XX IDs: 47"
+        },
+        {
+          "text": "Output is clearly focused/prioritised rather than trying to cover every possible threat exhaustively \u2014 appropriate for a solo MVP developer",
+          "passed": false,
+          "evidence": "Priority/focus language present and ST count is: 56"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 0,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.0,
+        "passed": 0,
+        "failed": 8,
+        "total": 8,
+        "time_seconds": 0.0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output contains a Security Requirements Traceability Matrix as a markdown table",
+          "passed": false,
+          "evidence": "Searching for SRTM table (| Req ID header)"
+        },
+        {
+          "text": "Output contains STRIDE threat analysis with at least 3 specific threats (ST-XXX IDs)",
+          "passed": false,
+          "evidence": "Found ST-0XX IDs: 0"
+        },
+        {
+          "text": "Output contains LINDDUN privacy threat analysis with PT-XXX IDs",
+          "passed": false,
+          "evidence": "Found PT-0XX IDs: 0"
+        },
+        {
+          "text": "Output contains security abuse cases with SAC-XXX IDs",
+          "passed": false,
+          "evidence": "Found SAC-0XX IDs: 0"
+        },
+        {
+          "text": "Output contains privacy abuse cases with PAC-XXX IDs",
+          "passed": false,
+          "evidence": "Found PAC-0XX IDs: 0"
+        },
+        {
+          "text": "Output contains refined requirements with [NEW] items beyond the original 6",
+          "passed": false,
+          "evidence": "Searching for [NEW] requirement markers"
+        },
+        {
+          "text": "Output contains defined test artifacts (TA-XXX IDs)",
+          "passed": false,
+          "evidence": "Found TA-0XX IDs: 0"
+        },
+        {
+          "text": "Output contains both security use cases (SUC-XXX) and privacy use cases (PUC-XXX)",
+          "passed": false,
+          "evidence": "SUC IDs: 0, PUC IDs: 0"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.7143,
+        "passed": 5,
+        "failed": 2,
+        "total": 7,
+        "time_seconds": 0.0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output references GDPR Article 9 or 'special category' data in relation to health information",
+          "passed": true,
+          "evidence": "Searching for GDPR Art. 9 or 'special category'"
+        },
+        {
+          "text": "Output identifies security threats specific to the HL7 FHIR API integration",
+          "passed": true,
+          "evidence": "Searching for FHIR-related threat/abuse content"
+        },
+        {
+          "text": "Output identifies IDOR or cross-patient data access as a security abuse case",
+          "passed": true,
+          "evidence": "Searching for IDOR or cross-patient access risk"
+        },
+        {
+          "text": "Output identifies privacy risks in SMS/email notification channels (e.g. health info in notifications)",
+          "passed": true,
+          "evidence": "Searching for notification channel privacy risk"
+        },
+        {
+          "text": "Output contains a Security Requirements Traceability Matrix as a markdown table",
+          "passed": false,
+          "evidence": "Searching for SRTM table (| Req ID header)"
+        },
+        {
+          "text": "Output contains defined test artifacts (TA-XXX IDs)",
+          "passed": false,
+          "evidence": "Found TA-0XX IDs: 0"
+        },
+        {
+          "text": "Output references NHS Digital standards or UK-specific healthcare compliance",
+          "passed": true,
+          "evidence": "Searching for NHS or UK-specific standards reference"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.6667,
+        "passed": 4,
+        "failed": 2,
+        "total": 6,
+        "time_seconds": 0.0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output identifies location data as a privacy risk (neighbourhood-level data enabling doxing or profiling)",
+          "passed": true,
+          "evidence": "Searching for location privacy risk"
+        },
+        {
+          "text": "Output addresses Stripe webhook signature validation or payment integration security",
+          "passed": true,
+          "evidence": "Searching for Stripe webhook/payment security"
+        },
+        {
+          "text": "Output identifies XSS or injection risks in user-generated content (listings, messages)",
+          "passed": true,
+          "evidence": "Searching for XSS or user-generated content injection risk"
+        },
+        {
+          "text": "Output contains a Security Requirements Traceability Matrix as a markdown table",
+          "passed": false,
+          "evidence": "Searching for SRTM table (| Req ID header)"
+        },
+        {
+          "text": "Output contains defined test artifacts (TA-XXX IDs)",
+          "passed": false,
+          "evidence": "Found TA-0XX IDs: 0"
+        },
+        {
+          "text": "Output is clearly focused/prioritised rather than trying to cover every possible threat exhaustively \u2014 appropriate for a solo MVP developer",
+          "passed": true,
+          "evidence": "Priority/focus language present and ST count is: 0"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 0.9444,
+        "stddev": 0.0962,
+        "min": 0.8333,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 0.0,
+        "stddev": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "tokens": {
+        "mean": 0.0,
+        "stddev": 0.0,
+        "min": 0,
+        "max": 0
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.4603,
+        "stddev": 0.3994,
+        "min": 0.0,
+        "max": 0.7143
+      },
+      "time_seconds": {
+        "mean": 0.0,
+        "stddev": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "tokens": {
+        "mean": 0.0,
+        "stddev": 0.0,
+        "min": 0,
+        "max": 0
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.48",
+      "time_seconds": "+0.0",
+      "tokens": "+0"
+    }
+  },
+  "notes": []
+}

@@ -1,0 +1,57 @@
+{
+  "eval_id": 0,
+  "eval_name": "saas-task-app",
+  "run_type": "with_skill",
+  "output_file": "/sessions/focused-dazzling-meitner/secure-privacy-by-design-workspace/iteration-1/eval-0-saas-task-app/with_skill/outputs/saas-task-app-security-privacy-analysis.md",
+  "expectations": [
+    {
+      "text": "Output contains a Security Requirements Traceability Matrix as a markdown table",
+      "passed": true,
+      "evidence": "Searching for SRTM table (| Req ID header)"
+    },
+    {
+      "text": "Output contains STRIDE threat analysis with at least 3 specific threats (ST-XXX IDs)",
+      "passed": true,
+      "evidence": "Found ST-0XX IDs: 105"
+    },
+    {
+      "text": "Output contains LINDDUN privacy threat analysis with PT-XXX IDs",
+      "passed": true,
+      "evidence": "Found PT-0XX IDs: 56"
+    },
+    {
+      "text": "Output contains security abuse cases with SAC-XXX IDs",
+      "passed": true,
+      "evidence": "Found SAC-0XX IDs: 74"
+    },
+    {
+      "text": "Output contains privacy abuse cases with PAC-XXX IDs",
+      "passed": true,
+      "evidence": "Found PAC-0XX IDs: 39"
+    },
+    {
+      "text": "Output contains refined requirements with [NEW] items beyond the original 6",
+      "passed": true,
+      "evidence": "Searching for [NEW] requirement markers"
+    },
+    {
+      "text": "Output contains defined test artifacts (TA-XXX IDs)",
+      "passed": true,
+      "evidence": "Found TA-0XX IDs: 126"
+    },
+    {
+      "text": "Output contains both security use cases (SUC-XXX) and privacy use cases (PUC-XXX)",
+      "passed": true,
+      "evidence": "SUC IDs: 58, PUC IDs: 39"
+    }
+  ],
+  "pass_count": 8,
+  "total_count": 8,
+  "pass_rate": 1.0,
+  "summary": {
+    "passed": 8,
+    "failed": 0,
+    "total": 8,
+    "pass_rate": 1.0
+  }
+}
