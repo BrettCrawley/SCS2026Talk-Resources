@@ -1,3 +1,6 @@
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- Copyright 2026 Brett Crawley -->
+
 # AI/ML and Agentic Threat Modelling Reference
 
 Apply this reference when the system under review involves any of:

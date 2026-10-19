@@ -1,3 +1,6 @@
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- Copyright 2026 Brett Crawley -->
+
 # Diagram Generation — Templates and Guidance
 
 ## Table of Contents

@@ -1,3 +1,6 @@
+<!-- SPDX-License-Identifier: CC-BY-SA-4.0 -->
+<!-- Copyright 2026 Brett Crawley -->
+
 # Elevation of Autonomy — Card Deck (full text)
 
 Read this after `ai-ml-threats.md` for per-element elicitation of AI/agentic threats. The

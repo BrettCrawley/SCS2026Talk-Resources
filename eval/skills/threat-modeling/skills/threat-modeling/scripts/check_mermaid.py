@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Brett Crawley
 """Lint Mermaid code fences in markdown for the render-safe rules in references/house-style.md §5.
 
 Usage:  python3 scripts/check_mermaid.py FILE.md [FILE2.md ...]

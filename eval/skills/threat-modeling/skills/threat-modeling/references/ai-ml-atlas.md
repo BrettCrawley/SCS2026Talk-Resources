@@ -1,3 +1,7 @@
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- Copyright 2026 Brett Crawley -->
+<!-- MITRE ATLAS identifiers and names (c) 2021-2026 The MITRE Corporation, Apache-2.0 -->
+
 # MITRE ATLAS — Adversarial Threat Landscape for AI Systems
 
 MITRE ATLAS™ technique, tactic and mitigation identifiers and names are drawn from the ATLAS data (ATLAS-latest.yaml, data version 2026.08), © 2021–2026 The MITRE Corporation, licensed under the Apache License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0). Source: https://github.com/mitre-atlas/atlas-data. The selection, annotations, OWASP mappings and guidance in this file are original and not part of ATLAS.

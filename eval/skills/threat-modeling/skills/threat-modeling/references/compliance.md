@@ -1,3 +1,6 @@
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- Copyright 2026 Brett Crawley -->
+
 # Compliance Framework Mappings Reference
 
 Use this reference to map threat findings to relevant regulatory and industry standards. Apply the frameworks that match the context — don't add all of them by default.

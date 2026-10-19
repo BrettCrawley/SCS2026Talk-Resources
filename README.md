@@ -19,7 +19,7 @@ eval/            the evaluation, and everything needed to reproduce it
   bin/, config/    harness
   results/         output lands here
 example-output/  example output from each run
-facilitator/     answer keys. Not for distribution
+facilitator/     answer keys. Read after running the exercise
 ```
 
 ## The argument
@@ -45,4 +45,4 @@ A good threat model needs four ingredients: **context**, **method**, **reasoning
 
 - `eval/README.md` opens with flag verification. Do that first.
 - The prompts in `eval/prompts/` are handout material. They are written to be read.
-- `facilitator/facilitator-code-map.md` is the answer key for the repository. Do not put it in the repository.
+- `facilitator/facilitator-code-map.md` is the answer key: where the drift and the flaws are planted in the PLAT-2810 repository. It is published so facilitators can check their own runs. Read it after running the exercise, not before, and never copy it into a context bundle.

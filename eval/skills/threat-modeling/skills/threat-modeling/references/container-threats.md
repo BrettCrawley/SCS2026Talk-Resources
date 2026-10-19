@@ -1,3 +1,6 @@
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- Copyright 2026 Brett Crawley -->
+
 # Container and Orchestration Threat Modelling — Detailed Reference
 
 Read this when the system is built, shipped, or run as containers. Containers are their own

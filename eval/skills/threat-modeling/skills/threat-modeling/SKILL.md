@@ -2,7 +2,11 @@
 name: threat-modeling
 description: >
   Structured threat modeling for applications, code, architecture, dependencies, cloud, containers and AI/ML. Use whenever a user designs a feature, reviews code, evaluates a dependency, or discusses architecture. Trigger on: threat model, STRIDE, STRIPED, CVE, authentication, authorization, PII, privacy, attack surface, secure design; cloud (AWS, Azure, GCP, IAM, S3, Lambda, Terraform, ATT&CK Cloud, OWASP Cumulus, CSA); containers (Docker, Dockerfile, OCI image, registry, Kubernetes, k8s, Helm, pod, service mesh, admission controller, EKS, GKE, AKS, ECS, container escape, ATT&CK Containers, OWASP Docker/Kubernetes Top 10, CIS, Pod Security Standards); AI/ML and agentic (LLM, prompt injection, RAG, vector store, embeddings, agent, MCP, OWASP LLM/Agentic Top 10, Elevation of Autonomy, MITRE ATLAS, adversarial ML, model extraction, data poisoning, context rot); or "is this safe?" / "any security concerns?". Proactively suggest it whenever a system is being built and security is relevant.
+license: Apache-2.0
 ---
+
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- Copyright 2026 Brett Crawley -->
 
 # Threat Modeling Skill
 

@@ -1,0 +1,22 @@
+Threat Modeling skill
+Copyright 2026 Brett Crawley
+
+Licensed under the Apache License, Version 2.0 (see LICENSE), except where a
+file states otherwise.
+
+This skill includes or adapts third-party material:
+
+- Elevation of Autonomy card deck (references/elevation-of-autonomy.md)
+  Copyright 2026 Brett Crawley. Licensed CC BY-SA 4.0
+  (https://creativecommons.org/licenses/by-sa/4.0/).
+  Source: https://github.com/BrettCrawley/elevation-of-autonomy
+
+- OWASP Cumulus card text (references/cloud-threats.md, section 2)
+  by TNG Technology Consulting GmbH. Licensed CC BY 4.0
+  (https://creativecommons.org/licenses/by/4.0/).
+  Source: https://github.com/TNG/cumulus
+
+- MITRE ATLAS technique, tactic and mitigation identifiers and names
+  (references/ai-ml-atlas.md). (c) 2021-2026 The MITRE Corporation.
+  Licensed under the Apache License, Version 2.0.
+  Source: https://github.com/mitre-atlas/atlas-data

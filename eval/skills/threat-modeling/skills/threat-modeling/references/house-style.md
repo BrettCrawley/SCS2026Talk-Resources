@@ -1,3 +1,6 @@
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- Copyright 2026 Brett Crawley -->
+
 # Deliverable House Style & Attribution
 
 Apply this whenever the skill produces a **written security deliverable for a real system** — a threat model, security review, gap analysis / SRTM, security-architecture document, use/abuse-case document, or an implementation guide. The goal is that every document looks and reads consistently, carries proper attribution, and — critically — **renders cleanly when exported to PDF**. Apply it to every threat-modelling output by default — right-size the *depth* of each section to the system's risk, not the *number* of sections.

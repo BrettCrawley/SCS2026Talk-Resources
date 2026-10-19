@@ -1,5 +1,8 @@
 # [System Name] — Security Architecture, Gap Analysis & SRTM
 
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- Copyright 2026 Brett Crawley -->
+
 <!-- TEMPLATE. Replace every [placeholder]; delete all HTML comments before shipping.
      House style: references/house-style.md. This is the architecture + requirements half
      of a two-document pack; the STRIPED findings + risk register live in the companion

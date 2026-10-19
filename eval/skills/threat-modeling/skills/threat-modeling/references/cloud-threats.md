@@ -1,3 +1,7 @@
+<!-- SPDX-License-Identifier: Apache-2.0 AND CC-BY-4.0 -->
+<!-- Copyright 2026 Brett Crawley -->
+<!-- OWASP Cumulus card text in section 2 is by TNG Technology Consulting GmbH, CC BY 4.0 -->
+
 # Cloud Threat Modelling — Detailed Reference
 
 This reference covers threats specific to cloud and DevOps environments. Use it whenever the system under review touches IaaS, PaaS, serverless, managed databases, IAM federation, CI/CD-to-cloud trust, or cloud-resident data stores.

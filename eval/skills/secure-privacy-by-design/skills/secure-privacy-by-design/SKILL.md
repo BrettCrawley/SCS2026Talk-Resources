@@ -1,7 +1,11 @@
 ---
 name: secure-privacy-by-design
 description: "Perform a Security and Privacy by Design analysis on a greenfield project or feature.\n\nUse this skill when the user: describes a new project or feature; shares requirements/user stories and wants security or privacy input; asks for a threat model, abuse cases, or security review; mentions \"secure by design\", \"privacy by design\", \"GDPR\", \"STRIDE\", \"LINDDUN\", \"SRTM\", \"CRA\", or \"NIS2\"; asks \"what could go wrong\" from a security perspective; or needs security documentation before development begins.\n\nProactively trigger this whenever requirements are shared and there's any security, privacy, or compliance dimension — even without an explicit request.\n\nProduces: classified requirements, use cases, STRIDE security threats, LINDDUN privacy threats, security and privacy abuse cases, counter-use cases, refined requirements, a Security Requirements Traceability Matrix (SRTM), test artifacts, and a regulatory compliance assessment covering GDPR, CRA, NIS2, PSTI, and other applicable frameworks.\n"
+license: Apache-2.0
 ---
+
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- Copyright 2026 Brett Crawley -->
 
 # Secure and Privacy by Design Analysis
 

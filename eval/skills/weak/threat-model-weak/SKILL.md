@@ -1,7 +1,11 @@
 ---
 name: threat-model-weak
 description: Produce a threat model for a system. Use when the user asks for a threat model, a security review of a design, or a STRIDE analysis.
+license: Apache-2.0
 ---
+
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- Copyright 2026 Brett Crawley -->
 
 # Threat modelling
 

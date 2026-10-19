@@ -1,3 +1,6 @@
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- Copyright 2026 Brett Crawley -->
+
 # Concurrency, IoC, and Cross-Cutting Concerns — Deep Reference
 
 ## Table of Contents

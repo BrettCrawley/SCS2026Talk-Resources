@@ -1,7 +1,11 @@
 ---
 name: security-architect
 description: "Senior security architect for designing, reviewing, and advising on software and system architecture with security and privacy baked in. Trigger on: system/feature design or architecture requests; design reviews; design patterns (software, system, security); SOLID, Clean Architecture, Well-Architected, hexagonal, CQRS, event sourcing, DDD, microservices; data modeling, graph databases (FalkorDB, Neo4j), data structures; diagrams (DFDs, sequence, class, ERDs); concurrency, threading, multi-processing; dependency injection, AOP, proxies; component decomposition, service boundaries; API design, event-driven architecture; crypto agility, quantum readiness; dashboard architecture. Trigger on \"how should I structure this?\", \"is this a good design?\", \"what pattern should I use?\". Part of a three-skill workflow: secure-privacy-by-design (before) defines requirements, this skill designs architecture, threat-modeling (after) validates it. Checks for prior artifacts and prompts the user at each workflow transition.\n"
+license: Apache-2.0
 ---
+
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- Copyright 2026 Brett Crawley -->
 
 # Security Architect Skill
 

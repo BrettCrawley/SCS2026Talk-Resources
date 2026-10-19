@@ -1,3 +1,6 @@
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- Copyright 2026 Brett Crawley -->
+
 # Third-Party Dependency Evaluation Reference
 
 Before adopting any external library, framework, or service, apply this evaluation. The goal is not to avoid all external dependencies — that's impractical and often counterproductive. The goal is to make a deliberate, documented decision about the tradeoffs.

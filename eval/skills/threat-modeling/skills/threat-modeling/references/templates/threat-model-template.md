@@ -1,5 +1,8 @@
 # [System Name] — Threat Model
 
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- Copyright 2026 Brett Crawley -->
+
 <!-- TEMPLATE. This is the canonical full-document scaffold; the section order is house style
      §2a and the numbering below matches it. Replace every [placeholder]; delete all HTML
      comments and any conditional section that does not apply (say why in §2 Out of scope).

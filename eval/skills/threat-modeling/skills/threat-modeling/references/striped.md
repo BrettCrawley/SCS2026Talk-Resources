@@ -1,3 +1,6 @@
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- Copyright 2026 Brett Crawley -->
+
 # STRIPED Threat Analysis — Detailed Reference
 
 This reference expands each STRIPED category with diagnostic questions and language-specific patterns to look for. Work through each category for every significant system element.

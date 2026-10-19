@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Brett Crawley
 """Make the skill's reference material available INSIDE the current working directory.
 
 Usage:  python3 <skill>/scripts/fetch_references.py [DEST]     (DEST default: ./.threat-modeling-refs)

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Brett Crawley
 """Lint a produced deliverable against references/house-style.md §1–§3 and §7, and
 references/templates/threat-model-template.md.
 

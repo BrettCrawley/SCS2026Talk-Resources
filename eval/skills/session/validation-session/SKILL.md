@@ -1,7 +1,11 @@
 ---
 name: validation-session
 description: Synthesise a validation session transcript for a security review pack. Use when given a pack in ./input/pack and a session specification in ./input/session-spec.md, and asked to produce the transcript of a review session held about that pack.
+license: Apache-2.0
 ---
+
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- Copyright 2026 Brett Crawley -->
 
 # Synthesising a validation session
 
