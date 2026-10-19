@@ -1,3 +1,5 @@
+![AI-Assisted Threat Modeling, Train the Trainer: the threat model was never the point](assets/repo-header.png)
+
 # Security Champion Summit 2026
 
 Talk materials, evaluation harness and demonstration assets.
